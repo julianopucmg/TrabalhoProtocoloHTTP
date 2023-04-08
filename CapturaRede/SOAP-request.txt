@@ -1,1 +1,141 @@
+  Frame: Number = 42, Captured Frame Length = 432, MediaType = ETHERNET
+- Ethernet: Etype = Internet IP (IPv4),DestinationAddress:[E8-94-F6-B6-89-F6],SourceAddress:[08-00-27-AB-05-AD]
+  - DestinationAddress: E894F6 B689F6 [E8-94-F6-B6-89-F6]
+     Rsv: (111010..)
+     UL:  (......0.) Universally Administered Address
+     IG:  (.......0) Individual address (unicast)
+  - SourceAddress: CADMUS COMPUTER SYSTEMS AB05AD [08-00-27-AB-05-AD]
+     Rsv: (000010..)
+     UL:  (......0.) Universally Administered Address
+     IG:  (.......0) Individual address (unicast)
+    EthernetType: Internet IP (IPv4), 2048(0x800)
+- Ipv4: Src = 192.168.26.104, Dest = 50.62.168.5, Next Protocol = TCP, Packet ID = 6933, Total IP Length = 418
+  - Versions: IPv4, Internet Protocol; Header Length = 20
+     Version:      (0100....) IPv4, Internet Protocol
+     HeaderLength: (....0101) 20 bytes (0x5)
+  - DifferentiatedServicesField: DSCP: 0, ECN: 0
+     DSCP: (000000..) Differentiated services codepoint 0
+     ECT:  (......0.) ECN-Capable Transport not set
+     CE:   (.......0) ECN-CE not set
+    TotalLength: 418 (0x1A2)
+    Identification: 6933 (0x1B15)
+  - FragmentFlags: 16384 (0x4000)
+     Reserved: (0...............)
+     DF:       (.1..............) Do not fragment
+     MF:       (..0.............) This is the last fragment
+     Offset:   (...0000000000000) 0
+    TimeToLive: 128 (0x80)
+    NextProtocol: TCP, 6(0x6)
+    Checksum: 10477 (0x28ED)
+    SourceAddress: 192.168.26.104
+    DestinationAddress: 50.62.168.5
+- Tcp: Flags=...AP..., SrcPort=51120, DstPort=HTTP(80), PayloadLen=378, Seq=3027089228 - 3027089606, Ack=2284304703, Win=1026 (scale factor 0x8) = 262656
+    SrcPort: 51120
+    DstPort: HTTP(80)
+    SequenceNumber: 3027089228 (0xB46DB74C)
+    AcknowledgementNumber: 2284304703 (0x8827B93F)
+  - DataOffset: 80 (0x50)
+     DataOffset: (0101....) 20 bytes
+     Reserved:   (....000.)
+     NS:         (.......0) Nonce Sum not significant
+  - Flags: ...AP...
+     CWR:    (0.......) CWR not significant
+     ECE:    (.0......) ECN-Echo not significant
+     Urgent: (..0.....) Not Urgent Data
+     Ack:    (...1....) Acknowledgement field significant
+     Push:   (....1...) Push Function
+     Reset:  (.....0..) No Reset
+     Syn:    (......0.) Not Synchronize sequence numbers
+     Fin:    (.......0) Not End of data
+    Window: 1026 (scale factor 0x8) = 262656
+    Checksum: 0x9DCA, Disregarded
+    UrgentPointer: 0 (0x0)
+    TCPPayload: SourcePort = 51120, DestinationPort = 80
+- Http: HTTP Payload, URL: /calculator.asmx 
+  - payload: HttpContentType =  text/xml; charset=utf-8
+   - Xml: version="1.0" encoding="UTF-8"
+      XmlPropertiesInitiator: 
+    - XMLDecl: XmlElement:<{xml directive}>
+     - Directive: <?xml version="1.0" encoding="UTF-8"?>
+      - Tag: <?xml version="1.0" encoding="UTF-8"?>
+       - TagName: xml
+          Name: xml
+       - Attributes: version="1.0" encoding="UTF-8"
+        - version: 1.0
+           Value: 1.0
+        - encoding: UTF-8
+           Value: UTF-8
+- Soap: xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://tempuri.org/"
+  - Envelope: <SOAP-ENV:Envelope>
+   - STag: <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://tempuri.org/">
+    - Tag: <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://tempuri.org/">
+     - TagName: SOAP-ENV:Envelope
+        NamespacePrefix: SOAP-ENV
+        Name: Envelope
+     - Attributes: xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://tempuri.org/"
+      - SOAP-ENV: http://schemas.xmlsoap.org/soap/envelope/
+         Value: http://schemas.xmlsoap.org/soap/envelope/
+      - xsi: http://www.w3.org/2001/XMLSchema-instance
+         Value: http://www.w3.org/2001/XMLSchema-instance
+      - ns0: http://schemas.xmlsoap.org/soap/envelope/
+         Value: http://schemas.xmlsoap.org/soap/envelope/
+      - ns1: http://tempuri.org/
+         Value: http://tempuri.org/
+   - Header: <SOAP-ENV:Header>
+    - STag: <SOAP-ENV:Header/>
+     - Tag: <SOAP-ENV:Header/>
+      - TagName: SOAP-ENV:Header
+         NamespacePrefix: SOAP-ENV
+         Name: Header
+   - Body: <ns0:Body>
+    - STag: <ns0:Body>
+     - Tag: <ns0:Body>
+      - TagName: ns0:Body
+         NamespacePrefix: ns0
+         Name: Body
+    - Node: XmlElement:<ns1:Add>
+     - STag: <ns1:Add>
+      - Tag: <ns1:Add>
+       - TagName: ns1:Add
+          NamespacePrefix: ns1
+          Name: Add
+     - Element: XmlElement:<ns1:intA> - 4
+      - STag: <ns1:intA>
+       - Tag: <ns1:intA>
+        - TagName: ns1:intA
+           NamespacePrefix: ns1
+           Name: intA
+        Content: 4
+      - ETag: </ns1:intA>
+       - Tag: </ns1:intA>
+        - TagName: ns1:intA
+           NamespacePrefix: ns1
+           Name: intA
+     - Element: XmlElement:<ns1:intB> - 5
+      - STag: <ns1:intB>
+       - Tag: <ns1:intB>
+        - TagName: ns1:intB
+           NamespacePrefix: ns1
+           Name: intB
+        Content: 5
+      - ETag: </ns1:intB>
+       - Tag: </ns1:intB>
+        - TagName: ns1:intB
+           NamespacePrefix: ns1
+           Name: intB
+     - ETag: </ns1:Add>
+      - Tag: </ns1:Add>
+       - TagName: ns1:Add
+          NamespacePrefix: ns1
+          Name: Add
+    - ETag: </ns0:Body>
+     - Tag: </ns0:Body>
+      - TagName: ns0:Body
+         NamespacePrefix: ns0
+         Name: Body
+   - ETag: </SOAP-ENV:Envelope>
+    - Tag: </SOAP-ENV:Envelope>
+     - TagName: SOAP-ENV:Envelope
+        NamespacePrefix: SOAP-ENV
+        Name: Envelope
 

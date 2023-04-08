@@ -1,0 +1,133 @@
+  Frame: Number = 44, Captured Frame Length = 659, MediaType = ETHERNET
+- Ethernet: Etype = Internet IP (IPv4),DestinationAddress:[08-00-27-AB-05-AD],SourceAddress:[E8-94-F6-B6-89-F6]
+  - DestinationAddress: CADMUS COMPUTER SYSTEMS AB05AD [08-00-27-AB-05-AD]
+     Rsv: (000010..)
+     UL:  (......0.) Universally Administered Address
+     IG:  (.......0) Individual address (unicast)
+  - SourceAddress: E894F6 B689F6 [E8-94-F6-B6-89-F6]
+     Rsv: (111010..)
+     UL:  (......0.) Universally Administered Address
+     IG:  (.......0) Individual address (unicast)
+    EthernetType: Internet IP (IPv4), 2048(0x800)
+- Ipv4: Src = 50.62.168.5, Dest = 192.168.26.104, Next Protocol = TCP, Packet ID = 59833, Total IP Length = 645
+  - Versions: IPv4, Internet Protocol; Header Length = 20
+     Version:      (0100....) IPv4, Internet Protocol
+     HeaderLength: (....0101) 20 bytes (0x5)
+  - DifferentiatedServicesField: DSCP: 0, ECN: 0
+     DSCP: (000000..) Differentiated services codepoint 0
+     ECT:  (......0.) ECN-Capable Transport not set
+     CE:   (.......0) ECN-CE not set
+    TotalLength: 645 (0x285)
+    Identification: 59833 (0xE9B9)
+  - FragmentFlags: 16384 (0x4000)
+     Reserved: (0...............)
+     DF:       (.1..............) Do not fragment
+     MF:       (..0.............) This is the last fragment
+     Offset:   (...0000000000000) 0
+    TimeToLive: 107 (0x6B)
+    NextProtocol: TCP, 6(0x6)
+    Checksum: 28261 (0x6E65)
+    SourceAddress: 50.62.168.5
+    DestinationAddress: 192.168.26.104
+- Tcp: Flags=...AP..F, SrcPort=HTTP(80), DstPort=51120, PayloadLen=605, Seq=2284304703 - 2284305309, Ack=3027089606, Win=1024 (scale factor 0x8) = 262144
+    SrcPort: HTTP(80)
+    DstPort: 51120
+    SequenceNumber: 2284304703 (0x8827B93F)
+    AcknowledgementNumber: 3027089606 (0xB46DB8C6)
+  - DataOffset: 80 (0x50)
+     DataOffset: (0101....) 20 bytes
+     Reserved:   (....000.)
+     NS:         (.......0) Nonce Sum not significant
+  - Flags: ...AP..F
+     CWR:    (0.......) CWR not significant
+     ECE:    (.0......) ECN-Echo not significant
+     Urgent: (..0.....) Not Urgent Data
+     Ack:    (...1....) Acknowledgement field significant
+     Push:   (....1...) Push Function
+     Reset:  (.....0..) No Reset
+     Syn:    (......0.) Not Synchronize sequence numbers
+     Fin:    (.......1) End of data
+    Window: 1024 (scale factor 0x8) = 262144
+    Checksum: 0xBD44, Good
+    UrgentPointer: 0 (0x0)
+    TCPPayload: SourcePort = 80, DestinationPort = 51120
+- Http: Response, HTTP/1.1, Status: Ok, URL: /calculator.asmx 
+    ProtocolVersion: HTTP/1.1
+    StatusCode: 200, Ok
+    Reason: OK
+    Cache-Control:  private, max-age=0
+  + ContentType:  text/xml; charset=utf-8
+    Server:  Microsoft-IIS/10.0
+    XAspNetVersion:  2.0.50727
+    XPoweredBy:  ASP.NET
+    X-Powered-By-Plesk:  PleskWin
+    Date:  Sat, 08 Apr 2023 02:54:26 GMT
+    Connection:  close
+    ContentLength:  325
+    HeaderEnd: CRLF
+  - payload: HttpContentType =  text/xml; charset=utf-8
+   - Xml: version="1.0" encoding="utf-8"
+      XmlPropertiesInitiator: 
+    - XMLDecl: XmlElement:<{xml directive}>
+     - Directive: <?xml version="1.0" encoding="utf-8"?>
+      - Tag: <?xml version="1.0" encoding="utf-8"?>
+       - TagName: xml
+          Name: xml
+       - Attributes: version="1.0" encoding="utf-8"
+        - version: 1.0
+           Value: 1.0
+        - encoding: utf-8
+           Value: utf-8
+- Soap: xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  - Envelope: <soap:Envelope>
+   - STag: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    - Tag: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+     - TagName: soap:Envelope
+        NamespacePrefix: soap
+        Name: Envelope
+     - Attributes: xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      - soap: http://schemas.xmlsoap.org/soap/envelope/
+         Value: http://schemas.xmlsoap.org/soap/envelope/
+      - xsi: http://www.w3.org/2001/XMLSchema-instance
+         Value: http://www.w3.org/2001/XMLSchema-instance
+      - xsd: http://www.w3.org/2001/XMLSchema
+         Value: http://www.w3.org/2001/XMLSchema
+   - Body: <soap:Body>
+    - STag: <soap:Body>
+     - Tag: <soap:Body>
+      - TagName: soap:Body
+         NamespacePrefix: soap
+         Name: Body
+    - Node: XmlElement:<AddResponse>
+     - STag: <AddResponse xmlns="http://tempuri.org/">
+      - Tag: <AddResponse xmlns="http://tempuri.org/">
+       - TagName: AddResponse
+          Name: AddResponse
+       - Attributes: xmlns="http://tempuri.org/"
+        - xmlns: http://tempuri.org/
+           Value: http://tempuri.org/
+     - Element: XmlElement:<AddResult> - 9
+      - STag: <AddResult>
+       - Tag: <AddResult>
+        - TagName: AddResult
+           Name: AddResult
+        Content: 9
+      - ETag: </AddResult>
+       - Tag: </AddResult>
+        - TagName: AddResult
+           Name: AddResult
+     - ETag: </AddResponse>
+      - Tag: </AddResponse>
+       - TagName: AddResponse
+          Name: AddResponse
+    - ETag: </soap:Body>
+     - Tag: </soap:Body>
+      - TagName: soap:Body
+         NamespacePrefix: soap
+         Name: Body
+   - ETag: </soap:Envelope>
+    - Tag: </soap:Envelope>
+     - TagName: soap:Envelope
+        NamespacePrefix: soap
+        Name: Envelope
+
